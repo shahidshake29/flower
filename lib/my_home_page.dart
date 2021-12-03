@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-List<String> flowerList=[
+
+List<String> flowerList = [
   "সর্যমুখীূ",
   "পদ্ম",
   "হেনা",
@@ -8,6 +9,11 @@ List<String> flowerList=[
   "শালুক",
   "জবা",
   "শিমূল",
+  "করবী",
+  "কেতকী",
+  "টগর",
+  "রজনীগন্ধা",
+  "বকুল",
 ];
 
 class MyHomePage extends StatefulWidget {
@@ -28,8 +34,42 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Column(
         children: [
-
-          ]
+          Expanded(
+            child: ListView.builder(
+                itemCount: flowerList.length,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                        height: 50,
+                        width: 10,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(20),
+                              bottomLeft: Radius.circular(20)),
+                          gradient: LinearGradient(colors: [
+                            Colors.lightBlue,
+                            Colors.orange,
+                          ]),
+                        ),
+                        child: Container(
+                            child: Container(
+                          child: Container(
+                            child: Center(
+                              child: Text(
+                                flowerList[index],
+                                style: TextStyle(
+                                    fontStyle: FontStyle.italic,
+                                    fontSize: 30,
+                                    color: Colors.white),
+                              ),
+                            ),
+                          ),
+                        ))),
+                  );
+                }),
+          ),
+        ],
       ),
     );
   }
