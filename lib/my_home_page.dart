@@ -48,20 +48,19 @@ class _MyHomePageState extends State<MyHomePage> {
                               topRight: Radius.circular(20),
                               bottomLeft: Radius.circular(20)),
                           gradient: LinearGradient(colors: [
-                            Colors.lightBlue,
-                            Colors.orange,
+                            Colors.amberAccent,
+                            Colors.teal,
                           ]),
                         ),
                         child: Container(
-                            child: Container(
-                          child: Container(
+                            child: Container(child: Container(
                             child: Center(
                               child: Text(
                                 flowerList[index],
                                 style: TextStyle(
                                     fontStyle: FontStyle.italic,
-                                    fontSize: 30,
-                                    color: Colors.white),
+                                    fontSize: 40,
+                                    color: Colors.white70),
                               ),
                             ),
                           ),
