@@ -10,7 +10,7 @@ List<String> flowerList = [
   "শিমূল",
   "বকুল",
   "টগর",
-  "মালতী",
+  "মালতী"
 ];
 
 class MyHomePage extends StatefulWidget {
